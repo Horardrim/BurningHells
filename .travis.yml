@@ -1,6 +1,10 @@
 matrix:
   include:
     - language: c
+      addons:
+        apt:
+          packages:
+          - rabbitmq-server
       services:
         - rabbitmq
       before_install:
