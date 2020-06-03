@@ -7,7 +7,8 @@ int main(int argc, char ** argv)
 #ifdef ENABLE_BURNING_HELLS_TEST
     printf("It's test for burning hells.\n");
 #else
-    printf("Welcome BurningHells adventurer.\n");
+    connect2rabbitMQ();
+    destroy_connection();
 #endif
     return 0;
 }
