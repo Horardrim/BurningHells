@@ -14,7 +14,7 @@ matrix:
         - sudo apt-get install -y librabbitmq-dev
         - sudo apt-get install -y subversion
 
-        - export MATRIX_C_VERSION=`grep "define BURNING_HELLS_VERSION" main/version.h | awk -F "\"" '{print $2}'`
+        - export BURNING_HELLS_VERSION=`grep "define BURNING_HELLS_VERSION" main/version.h | awk -F "\"" '{print $2}'`
       script:
         - make test
         - make gencov
