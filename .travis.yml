@@ -13,7 +13,6 @@ matrix:
         - sudo apt-get install -y libevent-dev
         - sudo apt-get install -y librabbitmq-dev
         - sudo apt-get install -y subversion
-        - sudo apt-get install -y erlang
 
         - export MATRIX_C_VERSION=`grep "define BURNING_HELLS_VERSION" main/version.h | awk -F "\"" '{print $2}'`
       script:
