@@ -5,10 +5,10 @@
 int main(int argc, char ** argv)
 {
 #ifdef ENABLE_BURNING_HELLS_TEST
-    printf("It's test for burning hells.\n");
-#else
     connect2rabbitMQ();
     destroy_connection();
+#else
+    
 #endif
     return 0;
 }
