@@ -20,4 +20,3 @@ matrix:
         - make gencov
       after_success:
         - bash <(curl -s https://codecov.io/bash)
-        - echo "VERSION:\ $BURNING_HELLS_VERSION"

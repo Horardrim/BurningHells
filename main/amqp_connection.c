@@ -35,7 +35,7 @@ void connect2rabbitMQ()
     }
 
     amqp_channel_open(rabbitmq_conn, 1);
-    printf("connect rabbit mq successfully.");
+    printf("connect rabbit mq successfully.\n");
 }
 
 void destroy_connection()

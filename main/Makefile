@@ -8,7 +8,7 @@ DEPS := $(SRC:./%.c=./$(BUILD_OUTPUT_DIR)/%.d)
 CFLAGS = -g -Wall -Werror 
 INCLUDE_PATH = 
 LD_FLAGS =
-LIBS = -levent -levent_pthreads -lrabbitmq
+LIBS = -levent -levent_pthreads -lrabbitmq -lpthread
 
 VERSION = `bash version.sh`
 
