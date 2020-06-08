@@ -1,0 +1,22 @@
+matrix:
+  include:
+    - language: c
+      addons:
+        apt:
+          packages:
+          - rabbitmq-server
+      services:
+        - rabbitmq
+      before_install:
+        - sudo apt-get install -y rpm
+        - sudo apt-get install -y valgrind
+        - sudo apt-get install -y libevent-dev
+        - sudo apt-get install -y librabbitmq-dev
+        - sudo apt-get install -y subversion
+
+        - export BURNING_HELLS_VERSION=`grep "define BURNING_HELLS_VERSION" main/version.h | awk -F "\"" '{print $2}'`
+      script:
+        - make test
+        - make gencov
+      after_success:
+        - bash <(curl -s https://codecov.io/bash)
